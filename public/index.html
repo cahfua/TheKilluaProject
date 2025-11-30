@@ -4,13 +4,152 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Killua Project</title>
+    <title>The Killua Project | Help Samoa’s Stray Dogs</title>
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-<body>
+<body class="page">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">🐾</span>
+                <span>The Killua Project</span>
+            </a>
 
-    <h1>Page Loading...</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="adopt.html">Adopt</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="education.html">Education</a>
+                <a href="shelters.html">Shelters</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="donation.html" class="btn btn-outline">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <p class="eyebrow">Samoa • Dog Rescue</p>
+                    <h1>Help Samoa’s stray dogs find a safe, loving home.</h1>
+                    <p class="hero-subtitle">
+                        Discover adoptable dogs, learn how to care for them in Samoa’s climate,
+                        and support local rescues through donations and volunteering.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="adopt.html" class="btn btn-primary">View Dogs</a>
+                        <a href="donation.html" class="btn btn-secondary">How to Help</a>
+                    </div>
+                    <p class="hero-meta">
+                        Built in memory of Killua and for all the island dogs who deserve better.
+                    </p>
+                </div>
+
+                <div class="hero-media">
+                    <div class="hero-card">
+                        <div class="hero-photo-placeholder">
+                            Future dog photo slider / featured pup
+                        </div>
+                        <p class="hero-card-caption">
+                            This card will eventually highlight a featured dog or show a mini gallery
+                            pulled from the API.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured dogs strip -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Dogs</h2>
+                <p class="section-intro">
+                    A quick preview of the kinds of dogs you’ll find on the Adopt page.
+                    These will eventually be loaded from the API.
+                </p>
+                <div class="dog-strip">
+                    <article class="dog-card">
+                        <div class="dog-photo-placeholder"></div>
+                        <div class="dog-name">Placeholder Pup</div>
+                    </article>
+                    <article class="dog-card">
+                        <div class="dog-photo-placeholder"></div>
+                        <div class="dog-name">Island Buddy</div>
+                    </article>
+                    <article class="dog-card">
+                        <div class="dog-photo-placeholder"></div>
+                        <div class="dog-name">Rescue Hero</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How you can help -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">How You Can Help</h2>
+                <p class="section-intro">
+                    Adoption is just one way to make a difference. Here are a few more ways
+                    you’ll be able to support Samoa’s dogs through this site.
+                </p>
+
+                <div class="help-grid">
+                    <article class="help-card">
+                        <h3>Adopt a Dog</h3>
+                        <p>Browse dogs from local rescues and shelters and start an adoption inquiry.</p>
+                    </article>
+                    <article class="help-card">
+                        <h3>Donate to Vet Care</h3>
+                        <p>Help cover vaccines, food, and medical treatment with a one-time gift.</p>
+                    </article>
+                    <article class="help-card">
+                        <h3>Share & Educate</h3>
+                        <p>Use the Education section to learn and share good dog-care practices.</p>
+                    </article>
+                    <article class="help-card">
+                        <h3>Volunteer Support</h3>
+                        <p>Connect with local rescues that need help with transport, fostering, or feeding.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education teaser -->
+        <section class="section">
+            <div class="container education-teaser">
+                <div>
+                    <h2 class="section-title">Learn to Care for Island Dogs</h2>
+                    <p class="section-intro">
+                        The Education page will include guides for flea &amp; tick prevention,
+                        heat safety, nutrition, and why spay/neuter campaigns are so important.
+                    </p>
+                    <a href="education.html" class="btn btn-primary">Go to Education</a>
+                </div>
+                <div class="education-card">
+                    <h3>“Know Your Dog” Quiz (Coming Soon)</h3>
+                    <p>
+                        You’ll be able to pick coat type, size, and personality traits to discover
+                        similar dog breeds and better understand your dog’s needs.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-note">
+                The Killua Project — Helping Samoa’s stray and neglected dogs find safe homes.
+            </p>
+        </div>
+    </footer>
 
     <script type="module" src="../js/main.js"></script>
 </body>

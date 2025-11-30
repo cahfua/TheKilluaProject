@@ -4,13 +4,50 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Killua Project</title>
+    <title>Adopt a Dog | The Killua Project</title>
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-<body>
+<body class="page">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">🐾</span>
+                <span>The Killua Project</span>
+            </a>
 
-    <h1>Page Loading...</h1>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="adopt.html" class="active">Adopt</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="education.html">Education</a>
+                <a href="shelters.html">Shelters</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="donation.html" class="btn btn-outline">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 class="section-title">Dogs Available for Adoption</h1>
+        <p class="section-intro">
+            Browse adoptable dogs from local rescues and shelters. Click on a dog to
+            learn more about their story and needs.
+        </p>
+
+        <div id="dog-list" class="dog-strip">
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-note">
+                The Killua Project — Helping Samoa’s stray and neglected dogs find safe homes.
+            </p>
+        </div>
+    </footer>
 
     <script type="module" src="../js/main.js"></script>
 </body>
