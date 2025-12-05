@@ -2,12 +2,12 @@
    COLOR PALETTE (Lavender Theme)
    =============================== */
 :root {
-    --primary: #6E62B6;
-    --primary-light: #A79BEF;
-    --accent: #E5B2FF;
-    --accent-dark: #C98CEB;
-    --neutral-dark: #2F2A3B;
-    --neutral-light: #F8F6FF;
+    --primary: #6e62b6;
+    --primary-light: #a79bef;
+    --accent: #e5b2ff;
+    --accent-dark: #c98ceb;
+    --neutral-dark: #2f2a3b;
+    --neutral-light: #f8f6ff;
     --white: #ffffff;
 }
 
@@ -22,32 +22,18 @@ body {
     color: var(--neutral-dark);
 }
 
-/* Navigation */
-nav {
-    background: var(--primary);
-    padding: 15px;
-    display: flex;
-    gap: 1rem;
-}
-
-nav a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: var(--accent);
-}
-
-/* Headers */
 h1,
 h2,
 h3 {
     color: var(--primary);
 }
 
-/* Buttons */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Generic button element (if you ever use <button>) */
 button {
     background: var(--accent);
     color: var(--neutral-dark);
@@ -62,7 +48,7 @@ button:hover {
     background: var(--accent-dark);
 }
 
-/* Card placeholder styling */
+/* Generic card utility */
 .card {
     background: var(--white);
     border: 2px solid var(--primary-light);
@@ -112,7 +98,6 @@ button:hover {
     gap: 0.5rem;
     font-weight: 700;
     color: var(--primary);
-    text-decoration: none;
 }
 
 .logo:hover {
@@ -127,8 +112,7 @@ button:hover {
     text-decoration: none;
 }
 
-/* NEW NAV STYLES */
-
+/* Main navigation pills */
 .main-nav {
     display: flex;
     gap: 0.75rem;
@@ -137,14 +121,13 @@ button:hover {
 
 .main-nav a {
     color: var(--neutral-dark);
-    text-decoration: none;
     position: relative;
     padding: 0.4rem 0.9rem;
     border-radius: 999px;
     transition: background 0.15s ease, color 0.15s ease;
 }
 
-/* CURRENT TAB: WHITE TEXT ON A PURPLE PILL */
+/* Current tab */
 .main-nav a.active {
     background: var(--primary);
     color: var(--white);
@@ -161,12 +144,8 @@ button:hover {
     gap: 0.75rem;
 }
 
-a {
-    text-decoration: none;
-}
-
 /* ===============================
-   BUTTONS
+   BUTTON COMPONENTS
    =============================== */
 
 .btn {
@@ -179,7 +158,6 @@ a {
     cursor: pointer;
     font-weight: 600;
     font-size: 0.95rem;
-    text-decoration: none;
 }
 
 .btn-primary {
@@ -401,6 +379,37 @@ a {
 
 .footer-note {
     opacity: 0.8;
+}
+
+/* ===============================
+   DONATIONS (CURRENCY DISPLAY)
+   =============================== */
+
+.donation-tiers {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.donation-tier {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.tier-converted {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.conversion-status {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.4rem;
 }
 
 /* ===============================

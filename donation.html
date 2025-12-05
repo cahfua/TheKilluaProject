@@ -33,22 +33,47 @@
     <main class="container section">
         <h1 class="section-title">Support the Dogs of Samoa</h1>
         <p class="section-intro">
-            This page will eventually use the exchangerate.host API to convert WST to
-            USD, NZD, AUD, and more. For now, it outlines the donation tiers and how
-            they will be displayed.
+            Your support helps cover food, medical care, and spay/neuter campaigns for island dogs.
+            The amounts below are in WST, with live conversions so overseas donors can see what
+            their gift is worth.
+        </p>
+        <p id="conversion-status" class="conversion-status">
+            Loading live currency conversion rates…
         </p>
 
         <section class="section">
-            <h2>Sample WST Donation Tiers</h2>
-            <ul>
-                <li><strong>WST $10</strong> – Deworming medication for one dog.</li>
-                <li><strong>WST $25</strong> – One bag of quality dog food.</li>
-                <li><strong>WST $50</strong> – Vet visit, vaccines, or urgent care support.</li>
+            <h2>Donation Tiers (WST)</h2>
+            <ul class="donation-tiers">
+                <!-- 25 WST -->
+                <li class="donation-tier" data-amount-wst="25">
+                    <strong>WST $25</strong> - Deworming meds and basic care for one dog.
+                    <div class="tier-converted">
+                        ≈ <span data-currency="USD">-</span> USD •
+                        <span data-currency="NZD">-</span> NZD •
+                        <span data-currency="AUD">-</span> AUD
+                    </div>
+                </li>
+
+                <!-- 120 WST -->
+                <li class="donation-tier" data-amount-wst="120">
+                    <strong>WST $120</strong> - Food and flea/tick prevention for several dogs.
+                    <div class="tier-converted">
+                        ≈ <span data-currency="USD">-</span> USD •
+                        <span data-currency="NZD">-</span> NZD •
+                        <span data-currency="AUD">-</span> AUD
+                    </div>
+                </li>
+
+                <!-- 160 WST -->
+                <li class="donation-tier" data-amount-wst="160">
+                    <strong>WST $160</strong> - Helps cover vet visits, vaccines, or urgent care.
+                    <div class="tier-converted">
+                        ≈ <span data-currency="USD">-</span> USD •
+                        <span data-currency="NZD">-</span> NZD •
+                        <span data-currency="AUD">-</span> AUD
+                    </div>
+                </li>
             </ul>
-            <p>
-                Under each tier, the site will eventually show the converted amount in
-                other currencies so overseas donors understand the value of their gift.
-            </p>
         </section>
 
         <section class="section-alt section">
@@ -70,6 +95,7 @@
     </footer>
 
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/donation.js"></script>
 </body>
 
 </html>
