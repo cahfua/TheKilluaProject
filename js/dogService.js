@@ -1,43 +1,29 @@
 import { getDogs } from "./api.js";
 
-/* ===============================
-   FALLBACK SAMPLE DOGS
-   =============================== */
 const FALLBACK_DOGS = [
   {
     id: "1",
-    name: "Lua",
-    age: "Young",
+    name: "Mochi",
+    age: "Adult",
     sex: "Female",
     city: "Apia",
-    photo: ""
+    photo: "images/8.jpg"
   },
   {
     id: "2",
-    name: "Buddy",
-    age: "Adult",
+    name: "Koa",
+    age: "Young",
     sex: "Male",
-    city: "Pago Pago",
-    photo: ""
-  },
-  {
-    id: "3",
-    name: "Sunny",
-    age: "Puppy",
-    sex: "Female",
-    city: "Savai’i",
-    photo: ""
+    city: "Vaitele",
+    photo: "images/7.jpg"
   }
 ];
 
-/* ===============================
-   FETCH DOG CARDS
-   =============================== */
 export async function fetchDogCards() {
   try {
     const dogs = await getDogs();
 
-    if (!dogs || dogs.length === 0) {
+    if (!dogs || !dogs.length) {
       console.warn("API returned no dogs. Using fallback list.");
       return FALLBACK_DOGS;
     }
@@ -55,4 +41,3 @@ export async function fetchDogCards() {
     return FALLBACK_DOGS;
   }
 }
-

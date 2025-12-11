@@ -1,29 +1,6 @@
 const BASE_URL = "https://api.rescuegroups.org/v5/public";
 const API_KEY = "MXIPnXbb";
 
-const FALLBACK_DOGS = [
-  {
-    id: "1",
-    attributes: {
-      name: "Mochi",
-      ageGroup: "Adult",
-      sex: "Female",
-      city: "Apia",
-      pictures: [{ original: { url: "https://place-puppy.com/300x300" } }]
-    }
-  },
-  {
-    id: "2",
-    attributes: {
-      name: "Koa",
-      ageGroup: "Young",
-      sex: "Male",
-      city: "Vaitele",
-      pictures: [{ original: { url: "https://place-puppy.com/301x301" } }]
-    }
-  }
-];
-
 export async function getDogs() {
   const url = `${BASE_URL}/animals/search`;
 
@@ -59,14 +36,14 @@ export async function getDogs() {
     });
 
     if (!resp.ok) {
-      console.warn("API error → using fallback. Status:", resp.status);
-      return FALLBACK_DOGS;
+      console.warn("API error status:", resp.status);
+      return [];
     }
 
     const data = await resp.json();
-    return data.data?.length ? data.data : FALLBACK_DOGS;
+    return data.data || [];
   } catch (e) {
-    console.warn("Network failure → using fallback", e);
-    return FALLBACK_DOGS;
+    console.warn("Network/API failure, returning [] so fallback is used", e);
+    return [];
   }
 }

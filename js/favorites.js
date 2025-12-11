@@ -1,6 +1,3 @@
-// favorites.js
-// LocalStorage favorites
-
 const STORAGE_KEY = "killua-favorites";
 
 export function getFavorites() {
@@ -25,4 +22,10 @@ export function addFavorite(dog) {
 export function removeFavorite(id) {
   const current = getFavorites().filter((d) => d.id !== id);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
+  console.log("Removed favorite with id:", id);
+}
+
+export function isFavorite(id) {
+  const current = getFavorites();
+  return current.some((d) => d.id === id);
 }

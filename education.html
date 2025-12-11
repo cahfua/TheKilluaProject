@@ -33,26 +33,100 @@
     <main class="container section">
         <h1 class="section-title">Education & Resources</h1>
         <p class="section-intro">
-            Learn how to care for dogs in Samoa’s climate and environment. This page
-            will eventually include full articles, checklists, and a fun “Know Your Dog” quiz.
+            Learn how to care for dogs in Samoa’s warm, humid climate. These short guides
+            focus on real situations island dog owners face every day.
         </p>
 
         <section class="section">
-            <h2>Care Guides (coming soon)</h2>
-            <ul>
-                <li>Flea &amp; tick prevention in warm, humid climates</li>
-                <li>Basic nutrition and safe local foods for dogs</li>
-                <li>Heat safety and hydration for outdoor dogs</li>
-                <li>Why spay/neuter campaigns are so important in Samoa</li>
-            </ul>
+            <h2>Care Guides</h2>
+            <p class="section-intro">
+                These short guides give clear, practical tips for caring for dogs in Samoa's warm,
+                tropical climate.
+            </p>
+        
+            <div class="care-guides">
+        
+                <details class="guide">
+                    <summary>Flea & Tick Prevention</summary>
+                    <p>
+                        Samoa’s humidity makes fleas and ticks common. Check your dog’s skin weekly,
+                        especially around ears, tail, and belly. Use monthly flea/tick prevention and
+                        keep sleeping areas clean and dry.
+                    </p>
+                </details>
+        
+                <details class="guide">
+                    <summary>Basic Nutrition</summary>
+                    <p>
+                        Island dogs stay healthiest with balanced meals. Combine quality kibble with
+                        cooked local foods (pumpkin, taro, chicken, fish). Avoid toxic foods such as
+                        chocolate, grapes, onions, and anything salty or seasoned.
+                    </p>
+                </details>
+        
+                <details class="guide">
+                    <summary>Heat Safety</summary>
+                    <p>
+                        Daytime heat can be dangerous. Provide shade, cool water, and rest during
+                        midday. Walk dogs early morning or late afternoon. Watch for signs of heat stress:
+                        heavy drooling, bright red tongue, wobbling, or vomiting.
+                    </p>
+                </details>
+        
+                <details class="guide">
+                    <summary>Spay & Neuter Awareness</summary>
+                    <p>
+                        Spaying/neutering prevents unwanted litters and reduces roaming and aggression.
+                        It helps control Samoa’s stray population and improves long-term health by lowering
+                        risks of infections and cancers.
+                    </p>
+                </details>
+        
+            </div>
         </section>
 
-        <section class="section-alt section">
-            <h2>“Know Your Dog” Quiz (placeholder)</h2>
+        <section class="section-alt section" id="quiz">
+            <h2>“Know Your Dog” Quiz</h2>
             <p>
-                Here you’ll eventually be able to click through simple questions about your dog’s
-                coat, size, and personality traits to see suggested breed types and care tips.
+                This quick quiz helps owners understand their dog’s needs based on coat type,
+                energy level, and personality traits. Your results will suggest simple daily
+                care habits for your island dog.
             </p>
+
+            <form id="dog-quiz-form" class="quiz-form">
+                <div class="quiz-field">
+                    <label for="quiz-size">What size is your dog?</label>
+                    <div class="quiz-options" id="quiz-size">
+                        <label><input type="radio" name="size" value="small"> Small</label>
+                        <label><input type="radio" name="size" value="medium"> Medium</label>
+                        <label><input type="radio" name="size" value="large"> Large</label>
+                    </div>
+                </div>
+
+                <div class="quiz-field">
+                    <label for="quiz-energy">How would you describe their energy?</label>
+                    <div class="quiz-options" id="quiz-energy">
+                        <label><input type="radio" name="energy" value="chill"> Very chill / mostly relaxed</label>
+                        <label><input type="radio" name="energy" value="medium"> A mix of calm and playful</label>
+                        <label><input type="radio" name="energy" value="high"> Always ready to run and play</label>
+                    </div>
+                </div>
+
+                <div class="quiz-field">
+                    <label for="quiz-coat">What kind of coat do they have?</label>
+                    <div class="quiz-options" id="quiz-coat">
+                        <label><input type="radio" name="coat" value="short"> Short coat</label>
+                        <label><input type="radio" name="coat" value="medium"> Medium coat</label>
+                        <label><input type="radio" name="coat" value="long"> Long or fluffy coat</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Get your result
+                </button>
+            </form>
+
+            <div id="quiz-result" class="quiz-result"></div>
         </section>
     </main>
 
@@ -60,6 +134,10 @@
         <div class="container footer-inner">
             <p class="footer-note">
                 The Killua Project — Helping Samoa’s stray and neglected dogs find safe homes.
+            </p>
+
+            <p class="footer-video">
+                <a href="https://youtu.be/hqeauuUVRaE?si=Q7pA6BnP9g6Am2kz" target="_blank">Click Me for the Project Development Demo</a>
             </p>
         </div>
     </footer>

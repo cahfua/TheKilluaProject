@@ -1,20 +1,22 @@
-// DOM element for a single dog card
 export function renderDogCard(dog) {
   const card = document.createElement("article");
   card.className = "dog-card";
+  card.dataset.id = dog.id;
 
   card.innerHTML = `
     <div class="dog-photo-placeholder">
       ${
         dog.photo
-          ? `<img src="${dog.photo}" alt="${dog.name}"
-                 style="width:100%;height:100%;object-fit:cover;border-radius:10px;">`
+          ? `<img src="${dog.photo}" alt="${dog.name}">`
           : ""
       }
     </div>
     <div class="dog-name">${dog.name}</div>
     <p>${dog.age} • ${dog.sex}</p>
     <p>${dog.city}</p>
+    <button class="btn btn-outline favorite-btn" data-id="${dog.id}">
+      ♡ Save
+    </button>
   `;
 
   return card;
